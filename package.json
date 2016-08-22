@@ -2,9 +2,7 @@
   "name": "js-lessons",
   "version": "1.0.0",
   "description": "JavaScript Lessons",
-  "main": "index.js",
   "directories": {
-    "example": "examples",
     "test": "test"
   },
   "dependencies": {

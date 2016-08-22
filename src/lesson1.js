@@ -6,7 +6,8 @@ exports.calculateLengthOfCycle = function (radius) {
 };
 
 /**
- * Calculates area of triangle by the given sides and angle between them rounding the result downward to nearest integer.
+ * Calculates area of triangle by the given sides: a and b, and alpha angle between them rounding the result downward
+ * to nearest integer.
  */
 exports.calculateAreaOfTriangle = function (a, b, alpha) {
     // todo: implementation

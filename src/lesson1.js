@@ -29,7 +29,7 @@ exports.getBeforeLastCharacter = function (word) {
 /**
  * Returns string from the given word that starts from the second character and ends by the last one (exclusively).
  */
-exports.getStringFromTheMiddle = function (word) {
+exports.getStringInTheMiddle = function (word) {
     // todo: implement
 };
 

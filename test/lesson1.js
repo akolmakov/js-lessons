@@ -19,8 +19,8 @@ describe("lesson1", function () {
     });
 
     it("returns string from word that starts from the second character and ends by the last one (exclusively)", function () {
-        expect("irBn").to.equal(lesson1.getBeforeLastCharacter("AirBnb"));
-        expect("oogl").to.equal(lesson1.getBeforeLastCharacter("Google"));
-        expect("icrosof").to.equal(lesson1.getBeforeLastCharacter("Microsoft"));
+        expect("irBn").to.equal(lesson1.getStringInTheMiddle("AirBnb"));
+        expect("oogl").to.equal(lesson1.getStringInTheMiddle("Google"));
+        expect("icrosof").to.equal(lesson1.getStringInTheMiddle("Microsoft"));
     });
 });

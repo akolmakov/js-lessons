@@ -24,6 +24,6 @@ exports.getCharacterBeforeLastOne = function (word) {
  * Returns string from the given word that starts from the second character and ends by the last one (exclusively).
  */
 exports.getStringBetweenFirstAndLastCharacters = function (word) {
-    // todo: implement
+    return word.slice(1, -1);
 };
 

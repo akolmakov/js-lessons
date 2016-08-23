@@ -21,13 +21,6 @@ exports.getBeforeLastCharacter = function (word) {
 };
 
 /**
- * Returns character from the given word that stands right before the last one.
- */
-exports.getBeforeLastCharacter = function (word) {
-    // todo: implement
-};
-
-/**
  * Returns string from the given word that starts from the second character and ends by the last one (exclusively).
  */
 exports.getStringInTheMiddle = function (word) {

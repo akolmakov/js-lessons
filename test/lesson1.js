@@ -13,14 +13,14 @@ describe("lesson1", function () {
     });
 
     it("returns character from word that stands right before the last one", function () {
-        expect("n").to.equal(lesson1.getBeforeLastCharacter("AirBnb"));
-        expect("l").to.equal(lesson1.getBeforeLastCharacter("Google"));
-        expect("f").to.equal(lesson1.getBeforeLastCharacter("Microsoft"));
+        expect("n").to.equal(lesson1.getCharacterBeforeLastOne("AirBnb"));
+        expect("l").to.equal(lesson1.getCharacterBeforeLastOne("Google"));
+        expect("f").to.equal(lesson1.getCharacterBeforeLastOne("Microsoft"));
     });
 
     it("returns string from word that starts from the second character and ends by the last one (exclusively)", function () {
-        expect("irBn").to.equal(lesson1.getStringInTheMiddle("AirBnb"));
-        expect("oogl").to.equal(lesson1.getStringInTheMiddle("Google"));
-        expect("icrosof").to.equal(lesson1.getStringInTheMiddle("Microsoft"));
+        expect("irBn").to.equal(lesson1.getStringBetweenFirstAndLastCharacters("AirBnb"));
+        expect("oogl").to.equal(lesson1.getStringBetweenFirstAndLastCharacters("Google"));
+        expect("icrosof").to.equal(lesson1.getStringBetweenFirstAndLastCharacters("Microsoft"));
     });
 });

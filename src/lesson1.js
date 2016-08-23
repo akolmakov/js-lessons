@@ -17,7 +17,7 @@ exports.calculateAreaOfTriangle = function (a, b, alpha) {
  * Returns character from the given word that stands right before the last one.
  */
 exports.getCharacterBeforeLastOne = function (word) {
-    // todo: implement
+    return word.charAt(word.length - 2);
 };
 
 /**

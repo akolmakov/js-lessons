@@ -14,7 +14,7 @@ describe("lesson1", function () {
 
     it("getCharacterBeforeLastOne", function () {
         expect(lesson1.getCharacterBeforeLastOne("AirBnb")).to.equal("n");
-        expect(lesson1.getCharacterBeforeLastOne("Google").to.equal("l"));
+        expect(lesson1.getCharacterBeforeLastOne("Google")).to.equal("l");
         expect(lesson1.getCharacterBeforeLastOne("Microsoft")).to.equal("f");
     });
 

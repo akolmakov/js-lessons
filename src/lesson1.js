@@ -2,7 +2,7 @@
  * Calculates length of cycle by the given radius rounding the result downward to nearest integer.
  */
 exports.calculateLengthOfCycle = function (radius) {
-    return Math.floor(2 * (Math.PI) * radius)
+    return Math.floor(2 * (Math.PI) * radius);
 };
 
 /**

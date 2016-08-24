@@ -2,7 +2,7 @@
  * Calculates length of cycle by the given radius rounding the result downward to nearest integer.
  */
 exports.calculateLengthOfCycle = function (radius) {
-    // todo: implementation
+    return Math.floor(2 * (Math.PI) * radius)
 };
 
 /**
@@ -10,7 +10,7 @@ exports.calculateLengthOfCycle = function (radius) {
  * to nearest integer.
  */
 exports.calculateAreaOfTriangle = function (a, b, alpha) {
-    // todo: implementation
+    return Math.floor(0.5 * a * b * Math.sin(alpha));
 };
 
 /**

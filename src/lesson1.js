@@ -2,7 +2,7 @@
  * Calculates length of cycle by the given radius rounding the result downward to nearest integer.
  */
 exports.calculateLengthOfCycle = function (radius) {
-    // todo: implementation
+    return Math.floor(2 * (Math.PI) * radius);
 };
 
 /**
@@ -10,20 +10,20 @@ exports.calculateLengthOfCycle = function (radius) {
  * to nearest integer.
  */
 exports.calculateAreaOfTriangle = function (a, b, alpha) {
-    // todo: implementation
+    return Math.floor(0.5 * a * b * Math.sin(alpha));
 };
 
 /**
  * Returns character from the given word that stands right before the last one.
  */
 exports.getCharacterBeforeLastOne = function (word) {
-    // todo: implement
+    return word.charAt(word.length - 2);
 };
 
 /**
  * Returns string from the given word that starts from the second character and ends by the last one (exclusively).
  */
 exports.getStringBetweenFirstAndLastCharacters = function (word) {
-    // todo: implement
+    return word.slice(1, -1);
 };
 

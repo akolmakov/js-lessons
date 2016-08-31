@@ -3,7 +3,7 @@
  * @param message
  * @constructor
  */
-exports.IllegalArgumentException = function(message) {
+exports.IllegalArgumentException = function (message) {
     this.name = "IllegalArgumentException";
     this.message = message
 };
@@ -19,9 +19,18 @@ exports.IllegalArgumentException.prototype.constructor = exports.IllegalArgument
  * @throws IllegalArgumentException if array or number is null or undefined
  */
 exports.indexOfNumber = function (array, number) {
-    // todo: implement
-};
+    if (array == null || array == undefined || number == null || number == undefined) {
+        throw new exports.IllegalArgumentException("'array' or 'number' must not be null and undefined")
+    }
 
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] == number) {
+            return i;
+        }
+    }
+
+    return -1;
+};
 /**
  * Returns {@code true} if the given number contains in the given number array. Otherwise, {@code false} is returned.
  * @param array array of numbers
@@ -29,7 +38,7 @@ exports.indexOfNumber = function (array, number) {
  * @throws IllegalArgumentException if array or number is null or undefined
  */
 exports.containsNumber = function (array, number) {
-    // todo: implement
+
 };
 
 /**
@@ -58,6 +67,17 @@ exports.dropFirst = function (array, n) {
  * @param array the array to sort
  * @throws IllegalArgumentException if array is null or undefined
  */
-exports.sort = function(array) {
-    // todo: implement
+exports.sort = function (array) {
+    var n = array.length;
+    for (var i = 0; i < n - 1; i++) {
+        for (var j = 0; j < n - 1 - i; j++) {
+            if (array[j + 1] < array[j]) {
+                var t = array[j + 1];
+                array[j + 1] = array[j];
+                array[j] = t;
+            }
+        }
+        return array;
+    }
+    ;
 };

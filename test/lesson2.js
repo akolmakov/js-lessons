@@ -45,11 +45,11 @@ describe("lesson2", function () {
 
     describe("takeFirst", function () {
         it("returns first n elements from an array", function () {
-            expect(lesson2.takeFirst([], 1)).to.equal([]);
-            expect(lesson2.takeFirst([22], 1)).to.equal([22]);
-            expect(lesson2.takeFirst([22], 2)).to.equal([22]);
-            expect(lesson2.takeFirst([22, 34, 51, 16], 3)).to.equal([22, 34, 51]);
-            expect(lesson2.takeFirst([22, 34, 51, 16], 5)).to.equal([22, 34, 51, 16]);
+            expect(lesson2.takeFirst([], 1)).to.eql([]);
+            expect(lesson2.takeFirst([22], 1)).to.eql([22]);
+            expect(lesson2.takeFirst([22], 2)).to.eql([22]);
+            expect(lesson2.takeFirst([22, 34, 51, 16], 3)).to.eql([22, 34, 51]);
+            expect(lesson2.takeFirst([22, 34, 51, 16], 5)).to.eql([22, 34, 51, 16]);
         });
 
         it("throws IllegalArgumentException when arguments are illegal", function () {
@@ -62,11 +62,11 @@ describe("lesson2", function () {
 
     describe("dropFirst", function () {
         it("returns an array with first n elements", function () {
-            expect(lesson2.dropFirst([], 1)).to.equal([]);
-            expect(lesson2.dropFirst([22], 1)).to.equal([]);
-            expect(lesson2.dropFirst([22, 16], 1)).to.equal([16]);
-            expect(lesson2.dropFirst([22, 16], 3)).to.equal([]);
-            expect(lesson2.dropFirst([22, 16, 53, 34], 3)).to.equal([34]);
+            expect(lesson2.dropFirst([], 1)).to.eql([]);
+            expect(lesson2.dropFirst([22], 1)).to.eql([]);
+            expect(lesson2.dropFirst([22, 16], 1)).to.eql([16]);
+            expect(lesson2.dropFirst([22, 16], 3)).to.eql([]);
+            expect(lesson2.dropFirst([22, 16, 53, 34], 3)).to.eql([34]);
         });
 
         it("throws IllegalArgumentException when arguments are illegal", function () {
@@ -79,10 +79,10 @@ describe("lesson2", function () {
 
     describe("sort", function () {
         it("sorts a number array in ascending order using bubble sort algorithm", function () {
-            expect(lesson2.sort([])).to.equal([]);
-            expect(lesson2.sort([22])).to.equal([22]);
-            expect(lesson2.sort([22, 12])).to.equal([12, 22]);
-            expect(lesson2.sort([22, 12, 54, 21, 22, 17, 19])).to.equal([12, 17, 19, 21, 22, 22, 54]);
+            expect(lesson2.sort([])).to.eql([]);
+            expect(lesson2.sort([22])).to.eql([22]);
+            expect(lesson2.sort([22, 12])).to.eql([12, 22]);
+            expect(lesson2.sort([22, 12, 54, 21, 22, 17, 19])).to.eql([12, 17, 19, 21, 22, 22, 54]);
         });
 
         it("throws IllegalArgumentException when arguments are illegal", function () {

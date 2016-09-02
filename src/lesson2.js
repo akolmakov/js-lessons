@@ -38,7 +38,16 @@ exports.indexOfNumber = function (array, number) {
  * @throws IllegalArgumentException if array or number is null or undefined
  */
 exports.containsNumber = function (array, number) {
+    if (array == null || array == undefined || number == null || number == undefined) {
+        throw new exports.IllegalArgumentException("'array' or 'number' must not be null and undefined")
+    }
 
+    for (var i = 0; i < array.length; i++) {
+        if (number == array[i]) {
+            return true;
+        }
+    }
+    return false;
 };
 
 /**
@@ -48,8 +57,16 @@ exports.containsNumber = function (array, number) {
  * @throws IllegalArgumentException if array or n is null or undefined
  */
 exports.takeFirst = function (array, n) {
-    // todo: implement
-};
+    if (n == null || n == undefined || array == null || array == undefined) {
+        throw new exports.IllegalArgumentException("'array' or 'number' must not be null and undefined")
+    }
+    var f = [];
+    for (i = 0; i < n.length; i++) {
+        f.push(n++);
+    }
+    return f;
+}
+;
 
 /**
  * Returns the array without its {@code n} first elements. If the given array has less than {@code n} elements,

@@ -100,6 +100,48 @@ exports.dropFirst = function (array, n) {
 };
 
 /**
+ * Returns a new array that is a subarray of this array. The subarray begins at the given `beginIndex` and extends
+ * to the element at index `endIndex - 1`. Thus the length of subarray is `endIndex - beginIndex`.
+ * If `beginIndex` is after the last index of the array, empty subarray is returned.
+ * If `endIndex - 1` is after the last index of the array, it is assumed that `endIndex` is equal to length of array.
+ * Examples:
+ * subArray([2, 5, 7, 3, 4], 1, 3) => [5, 7]
+ * subArray([2, 5, 7, 3, 4], 4, 5) => [4]
+ * subArray([2, 5, 7, 3, 4], 9, 12) => []
+ * subArray([2, 5, 7, 3, 4], 3, 8) => [3, 4]
+ * @param array the array to extract subarray from
+ * @param beginIndex the begin index, inclusive
+ * @param endIndex the end index, exclusive
+ */
+exports.subArray = function (array, beginIndex, endIndex) {
+    // todo: implement
+};
+
+/**
+ * Returns a new array resulting from replacing all elements of `oldNumber` in the given array with `newNumber`.
+ * Examples:
+ * replaceNumber([2, 5, 7, 2, 4], 2, 10) => [10, 5, 7, 10, 4]
+ * @param array the array to replace numbers in
+ * @param oldNumber the old number
+ * @param newNumber the new number
+ */
+exports.replaceNumber = function (array, oldNumber, newNumber) {
+    // todo: implement
+};
+
+/**
+ * Concatenates the specified second array to the end of the fist array and returns new array as the result.
+ * Examples:
+ * concat([2, 5, 7], [3, 4]) => [2, 5, 7, 3, 4]
+ * Note, you must not use any helper methods like push, pop, etc.
+ * @param firstArray the first array
+ * @param secondArray the second array
+ */
+exports.concat = function (firstArray, secondArray) {
+    // todo: implement
+};
+
+/**
  * Sorts the given number array in ascending order using bubble sort algorithm.
  * @param array the array to sort
  * @throws IllegalArgumentException if array is null or undefined

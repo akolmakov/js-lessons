@@ -144,7 +144,6 @@ exports.concat = function (firstArray, secondArray) {
 /**
  * Sorts the given number array in ascending order using bubble sort algorithm.
  * @param array the array to sort
- * @throws IllegalArgumentException if array is null or undefined
  */
 exports.sort = function (array) {
     var n = array.length;

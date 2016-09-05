@@ -51,7 +51,8 @@ exports.containsNumber = function (array, number) {
 };
 
 /**
- * Returns the {@code n} first elements from the given array, or else the whole array, if it has less than {@code n} elements.
+ * Returns the {@code n} first elements from the given array, or else the whole array, if it has less than {@code n}
+ * elements, the whole array is returned.
  * @param array the array to take the {@code n} first elements from
  * @param n the number of element to take
  * @throws IllegalArgumentException if array or n is null or undefined
@@ -60,13 +61,18 @@ exports.takeFirst = function (array, n) {
     if (n == null || n == undefined || array == null || array == undefined) {
         throw new exports.IllegalArgumentException("'array' or 'number' must not be null and undefined")
     }
-    var f = [];
-    for (i = 0; i < n.length; i++) {
-        f.push(n++);
+    if (n > array.length) {
+        return array;
     }
-    return f;
-}
-;
+
+    var result = [];
+    for (var i = 0; i < n; i++) {
+        var a = array[i];
+        result.push(a);
+    }
+
+    return result;
+};
 
 /**
  * Returns the array without its {@code n} first elements. If the given array has less than {@code n} elements,
@@ -76,7 +82,21 @@ exports.takeFirst = function (array, n) {
  * @throws IllegalArgumentException if array or n is null or undefined
  */
 exports.dropFirst = function (array, n) {
-    // todo: implement
+    if (array == null || array == undefined || n == null || n == undefined) {
+        throw new exports.IllegalArgumentException("'array' or 'number' must not be null and undefined")
+    }
+
+    if (n > array.length) {
+        return [];
+    }
+
+    var result = [];
+    for (var i = n; i < array.length; i++) {
+        var element = array[i];
+        result.push(element);
+    }
+
+    return result;
 };
 
 /**

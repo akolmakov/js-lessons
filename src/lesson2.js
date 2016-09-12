@@ -114,7 +114,18 @@ exports.dropFirst = function (array, n) {
  * @param endIndex the end index, exclusive
  */
 exports.subArray = function (array, beginIndex, endIndex) {
-    // todo: implement
+    if (beginIndex >= array.length) {
+        return [];
+    }
+    if (endIndex > array.length) {
+        endIndex = array.length;
+    }
+    var result = [];
+    for (var i = beginIndex; i < endIndex; i++) {
+        result.push(array[i]);
+    }
+    return result;
+
 };
 
 /**

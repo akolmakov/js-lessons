@@ -126,15 +126,12 @@ exports.subArray = function (array, beginIndex, endIndex) {
  * @param newNumber the new number
  */
 exports.replaceNumber = function (array, oldNumber, newNumber) {
-    /* for (var i = 0; i < array.length; i++) {
-     newNumber = array[i];
-     delete newNumber[i];
-     }
-     for (var j = 0; j < array.length; j++) {
-     oldNumber = array[j];
-     newNumber.push(oldNumber);
-     }
-     return newNumber;*/
+    for (i = 0; i < array.length; i++) {
+        if (array[i] == oldNumber) {
+            array[i] = newNumber;
+        }
+    }
+    return array;
 };
 
 /**

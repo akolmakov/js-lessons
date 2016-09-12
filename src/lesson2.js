@@ -126,7 +126,15 @@ exports.subArray = function (array, beginIndex, endIndex) {
  * @param newNumber the new number
  */
 exports.replaceNumber = function (array, oldNumber, newNumber) {
-    // todo: implement
+    /* for (var i = 0; i < array.length; i++) {
+     newNumber = array[i];
+     delete newNumber[i];
+     }
+     for (var j = 0; j < array.length; j++) {
+     oldNumber = array[j];
+     newNumber.push(oldNumber);
+     }
+     return newNumber;*/
 };
 
 /**
@@ -138,7 +146,8 @@ exports.replaceNumber = function (array, oldNumber, newNumber) {
  * @param secondArray the second array
  */
 exports.concat = function (firstArray, secondArray) {
-    // todo: implement
+    firstArray = firstArray.concat(secondArray);
+    return firstArray;
 };
 
 /**
@@ -146,16 +155,14 @@ exports.concat = function (firstArray, secondArray) {
  * @param array the array to sort
  */
 exports.sort = function (array) {
-    var n = array.length;
-    for (var i = 0; i < n - 1; i++) {
-        for (var j = 0; j < n - 1 - i; j++) {
-            if (array[j + 1] < array[j]) {
-                var t = array[j + 1];
-                array[j + 1] = array[j];
-                array[j] = t;
+    for (var j = 0; j < array.length; j++) {
+        for (var i = 0; i < array.length - 1; i++) {
+            if (array[i] > array[i + 1]) {
+                var k = array[i];
+                array[i] = array[i + 1];
+                array[i + 1] = k
             }
         }
-        return array;
     }
-    ;
+    return array;
 };

@@ -154,9 +154,14 @@ exports.replaceNumber = function (array, oldNumber, newNumber) {
  * @param secondArray the second array
  */
 exports.concat = function (firstArray, secondArray) {
-    // todo: do not use concat, create own implementation, see note
-    firstArray = firstArray.concat(secondArray);
-    return firstArray;
+    var result = [];
+    for (var i = 0; i < firstArray.length; i++) {
+        result[i] = firstArray[i];
+    }
+    for (var j = 0; j < secondArray.length; j++) {
+        result[firstArray.length + j] = secondArray[j];
+    }
+    return result;
 };
 
 /**
@@ -172,7 +177,16 @@ exports.concat = function (firstArray, secondArray) {
  * @param n число, которому должны быть кратны значения елементов массива `array`
  */
 exports.findModNElement = function (array, n) {
-    // todo implement
+    var result = [];
+    var j = 0;
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] % n == 0) {
+            result[j] = array[i];
+             j++;
+           /* result.push(array[i]);*/
+        }
+    }
+    return result;
 };
 
 /**

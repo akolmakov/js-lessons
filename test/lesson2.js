@@ -80,7 +80,7 @@ describe("lesson2", function () {
         });
     });
 
-    it("subArray", function() {
+    it("subArray", function () {
         expect(lesson2.subArray([], 1, 2)).to.eql([]);
         expect(lesson2.subArray([5], 1, 2)).to.eql([]);
         expect(lesson2.subArray([5, 7, 6, 4, 0], 1, 2)).to.eql([7]);
@@ -90,19 +90,27 @@ describe("lesson2", function () {
     });
 
     it("replaceNumber", function () {
-       expect(lesson2.replaceNumber([], 2, 3)).to.eql([]);
-       expect(lesson2.replaceNumber([2], 2, 3)).to.eql([3]);
-       expect(lesson2.replaceNumber([2, 6, 9, 4], 2, 3)).to.eql([3, 6, 9, 4]);
-       expect(lesson2.replaceNumber([2, 6, 9, 2], 2, 3)).to.eql([3, 6, 9, 3]);
-       expect(lesson2.replaceNumber([2, 6, 9, 2], 0, 3)).to.eql([2, 6, 9, 2]);
+        expect(lesson2.replaceNumber([], 2, 3)).to.eql([]);
+        expect(lesson2.replaceNumber([2], 2, 3)).to.eql([3]);
+        expect(lesson2.replaceNumber([2, 6, 9, 4], 2, 3)).to.eql([3, 6, 9, 4]);
+        expect(lesson2.replaceNumber([2, 6, 9, 2], 2, 3)).to.eql([3, 6, 9, 3]);
+        expect(lesson2.replaceNumber([2, 6, 9, 2], 0, 3)).to.eql([2, 6, 9, 2]);
     });
 
     it("concat", function () {
-       expect(lesson2.concat([], [])).to.eql([]);
-       expect(lesson2.concat([], [3])).to.eql([3]);
-       expect(lesson2.concat([1], [])).to.eql([1]);
-       expect(lesson2.concat([1], [3])).to.eql([1, 3]);
-       expect(lesson2.concat([1, 5, 2], [3, 7])).to.eql([1, 5, 2, 3, 7]);
+        expect(lesson2.concat([], [])).to.eql([]);
+        expect(lesson2.concat([], [3])).to.eql([3]);
+        expect(lesson2.concat([1], [])).to.eql([1]);
+        expect(lesson2.concat([1], [3])).to.eql([1, 3]);
+        expect(lesson2.concat([1, 5, 2], [3, 7])).to.eql([1, 5, 2, 3, 7]);
+    });
+
+    it("findModNElement", function () {
+        expect(lesson2.findModNElement([], 1)).to.eql([]);
+        expect(lesson2.findModNElement([], 3)).to.eql([]);
+        expect(lesson2.findModNElement([1, 2, 3, 4, 5, 6], 1)).to.eql([1, 2, 3, 4, 5, 6]);
+        expect(lesson2.findModNElement([1, 2, 3, 4, 5, 6], 2)).to.eql([2, 4, 6]);
+        expect(lesson2.findModNElement([1, 2, 3, 4, 5, 6], 3)).to.eql([3, 6]);
     });
 
     it("sort", function () {

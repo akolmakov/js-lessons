@@ -154,8 +154,25 @@ exports.replaceNumber = function (array, oldNumber, newNumber) {
  * @param secondArray the second array
  */
 exports.concat = function (firstArray, secondArray) {
+    // todo: do not use concat, create own implementation, see note
     firstArray = firstArray.concat(secondArray);
     return firstArray;
+};
+
+/**
+ * Функция возвращает все елементы из массива `array` в новом массив значения которых кратны числу `n`.
+ * Например:
+ * findModNElement([1, 2, 3, 4], 1) => [1, 2, 3, 4]
+ * findModNElement([1, 2, 3, 4], 2) => [2, 4]
+ * findModNElement([1, 2, 3, 4, 5, 6], 3) => [3, 6]
+ * Основная задача:
+ * Узнать как определить кратность числа другому числу, записать это как условие, и если оно `true`,
+ * то такое число должно быть добавлено в новый массив, который это функция должна вернуть.
+ * @param array массив в котором нужно елементы, значения которых кратные `n`
+ * @param n число, которому должны быть кратны значения елементов массива `array`
+ */
+exports.findModNElement = function (array, n) {
+    // todo implement
 };
 
 /**

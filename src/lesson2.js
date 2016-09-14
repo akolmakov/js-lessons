@@ -190,6 +190,19 @@ exports.findModNElement = function (array, n) {
 };
 
 /**
+ * Функция возвращется сумму (число) всех значений єлементов массива `array`. Если массив пустой, `0` возвращается.
+ * Например:
+ * sumNumbers([]) => 0
+ * sumNumbers([1]) => 1
+ * sumNumbers([1, 2]) => 3
+ * sumNumbers([1, 2, 3]) => 6
+ * @param array массив, сумму елементов которых нужно посчитать и вернуть
+ */
+exports.sumNumbers = function (array) {
+  // todo: implement
+};
+
+/**
  * Sorts the given number array in ascending order using bubble sort algorithm.
  * @param array the array to sort
  */

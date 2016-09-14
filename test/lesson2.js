@@ -113,6 +113,13 @@ describe("lesson2", function () {
         expect(lesson2.findModNElement([1, 2, 3, 4, 5, 6], 3)).to.eql([3, 6]);
     });
 
+    it("sumNumbers", function () {
+        expect(lesson2.sumNumbers([])).to.eql(0);
+        expect(lesson2.sumNumbers([1])).to.eql(1);
+        expect(lesson2.sumNumbers([1, 2])).to.eql(3);
+        expect(lesson2.sumNumbers([1, 2, 3])).to.eql(6);
+    });
+
     it("sort", function () {
         it("sorts a number array in ascending order using bubble sort algorithm", function () {
             expect(lesson2.sort([])).to.eql([]);

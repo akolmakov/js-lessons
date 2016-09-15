@@ -182,8 +182,8 @@ exports.findModNElement = function (array, n) {
     for (var i = 0; i < array.length; i++) {
         if (array[i] % n == 0) {
             result[j] = array[i];
-             j++;
-           /* result.push(array[i]);*/
+            j++;
+            /* result.push(array[i]);*/
         }
     }
     return result;
@@ -199,7 +199,11 @@ exports.findModNElement = function (array, n) {
  * @param array массив, сумму елементов которых нужно посчитать и вернуть
  */
 exports.sumNumbers = function (array) {
-  // todo: implement
+    var result = 0;
+    for (var i = 0; i < array.length; i++) {
+        result += array[i];
+    }
+    return result;
 };
 
 /**
